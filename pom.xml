@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <jdk.version>1.6</jdk.version>
+        <!-- Depends on the java version installed on the node. You should check it by issuing "java -version" -->
         <jdk.version>1.6</jdk.version>
     </properties>
 
@@ -76,7 +76,6 @@
                             <mainClass>main.Main</mainClass>
                         </manifest>
                     </archive>
-
                 </configuration>
                 <executions>
                     <execution>

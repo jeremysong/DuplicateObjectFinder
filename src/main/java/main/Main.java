@@ -2,6 +2,7 @@ package main;
 
 import com.google.common.base.Preconditions;
 import com.google.common.base.Throwables;
+import io.ObjectReader;
 import io.StringLineReader;
 import org.apache.commons.lang.StringUtils;
 import org.kohsuke.args4j.CmdLineException;
@@ -20,7 +21,7 @@ import java.util.Set;
 import static org.kohsuke.args4j.ExampleMode.ALL;
 
 /**
- * Created by jeremy on 3/22/15.
+ * Too lazy... Let me know if you don't understand.
  */
 public class Main {
 
@@ -37,6 +38,11 @@ public class Main {
         new Main().doIt(args);
     }
 
+    /**
+     * This method actually does everything.
+     *
+     * @throws IOException
+     */
     public void doIt(String[] args) throws IOException {
         CmdLineParser parser = new CmdLineParser(this);
         // if you have a wider console, you could increase the value;
@@ -73,7 +79,7 @@ public class Main {
         // This map will be put in the memory because potentially there will be a few same strings.
         Map<String, Integer> dupStrMap = new HashMap<String, Integer>();
 
-        StringLineReader reader = null;
+        ObjectReader<String> reader = null;
         try {
             reader = new StringLineReader(new File(inputFilePath));
             while (reader.hasNext()) {

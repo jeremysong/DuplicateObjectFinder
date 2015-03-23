@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Created by jeremy on 3/22/15.
+ * A {@link io.ObjectReader} implementation. It is basically a {@link org.apache.commons.io.LineIterator} wrapper.
  */
 public class StringLineReader implements ObjectReader<String> {
 

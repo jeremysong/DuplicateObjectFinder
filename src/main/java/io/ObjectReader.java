@@ -3,7 +3,8 @@ package io;
 import java.io.Closeable;
 
 /**
- * Created by jeremy on 3/22/15.
+ * Ideally this could support many formats depends on the implementation. The underline implementation should use
+ * {@link java.util.Iterator} because the input source is potentially too large to be fitted into memory.
  */
 public interface ObjectReader<E> extends Closeable {
 
